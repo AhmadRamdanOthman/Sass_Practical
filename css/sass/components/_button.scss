@@ -1,0 +1,44 @@
+.main-button{
+    background-color: rgba($redColor, .8);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    min-width: 120px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover{
+        background-color: $redColor;
+        @include trans
+    }
+    @media #{$maxMobile}{
+        display: block;
+        margin: 5px auto;
+    }
+    
+}
+
+.the-toggler{
+    background-color: $redColor;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: $right;
+    display: none;
+    @media (#{$maxMobile})  {
+        display: block;
+    }
+    span{
+        display: block;
+        height: 4px;
+        width:50px;
+        background-color: #fff;
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+    }
+}
